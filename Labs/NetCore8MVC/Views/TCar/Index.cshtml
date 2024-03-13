@@ -1,0 +1,22 @@
+﻿@model TCar
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th> Marka</th>
+            <th> Model</th>
+            <th> ModelYil</th>
+            <th> Renk</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td> @Model.Marka </td>   @*  View'e gelen Urun bilgilerinin her birine @Model.property kullanılarak erişebilirsiniz. *@
+                <td> @Model.Model </td>
+                <td> @Model.ModelYil </td>
+                <td> @Model.Renk </td>
+            </tr>
+
+    </tbody>
+</table>
