@@ -1,0 +1,37 @@
+﻿@model List<Kitap>
+
+<a class="btn btn-info" asp-controller="Kitap" asp-action="Ekle">Kitap Ekle</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Ad</th>
+            <th scope="col">Yazar</th>
+            <th scope="col">YayinEvi</th>
+            <th scope="col">Kategori</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (Kitap kitap in Model) {
+
+        <tr>
+            <td>@kitap.Id</td>
+                <td>@kitap.Ad</td>
+                <td>@kitap.Yazar</td>
+                <td>@kitap.YayinEvi</td>
+                <td>@kitap.Kategori</td>
+                <td>
+                    <a class="btn btn-danger" asp-area="" asp-controller="Kitap" asp-action="Sil">Sil</a>
+                    <a class="btn btn-success" asp-controller="Kitap" asp-action="Güncelle">Güncelle</a>
+                </td>
+			</tr>
+		}
+
+    </tbody>
+	</table>
+
+<p>@ViewData["Roman"]</p>
+<p>@ViewData["Klasik"]</p>
+<p>@TempData["Bilgisayar"]</p>
